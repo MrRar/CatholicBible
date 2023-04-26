@@ -13,8 +13,8 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          echo $NIGHTLY_STORE_FILE
-          echo ${NIGHTLY_STORE_FILE} | base64 -d > KEY_NIGHTLY.jks
+          echo "$NIGHTLY_STORE_FILE"
+          echo "${NIGHTLY_STORE_FILE}" | base64 -d > KEY_NIGHTLY.jks
           ./gradlew :app:assembleRelease
         env:
           SIGNING_KEY_FILENAME: KEY_NIGHTLY.jks
