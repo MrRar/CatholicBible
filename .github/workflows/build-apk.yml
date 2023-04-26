@@ -28,7 +28,7 @@ jobs:
           NIGHTLY_STORE_FILE: ${{ vars.KEY_FILE }}
 
       - name: Upload APK
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: CatholicBible.apk
           path: app/build/outputs/apk/release/*.apk
