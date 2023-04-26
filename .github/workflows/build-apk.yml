@@ -24,7 +24,7 @@ jobs:
           echo $NIGHTLY_STORE_FILE | base64 -d > KEY_NIGHTLY.jks
           ./gradlew :app:assembleRelease
         env:
-          SIGNING_KEY_FILENAME: KEY_NIGHTLY.jks
+          SIGNING_STORE_FILENAME: KEY_NIGHTLY.jks
           SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
           SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
           SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
