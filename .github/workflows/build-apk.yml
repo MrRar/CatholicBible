@@ -15,9 +15,6 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
-
       - name: Build with Gradle
         run: |
           echo $NIGHTLY_STORE_FILE
@@ -34,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: CatholicBible.apk
-          path: build/outputs/apk/release/*.apk
+          path: app/build/outputs/apk/release/*.apk
