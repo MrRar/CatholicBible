@@ -25,7 +25,7 @@ jobs:
           SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
           SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
           SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
-          NIGHTLY_STORE_FILE: ${{ vars.KEY_FILE }}
+          NIGHTLY_STORE_FILE: ${{ secrets.NIGHTLY_STORE_FILE }}
 
       - name: Upload APK
         uses: actions/upload-artifact@v3
